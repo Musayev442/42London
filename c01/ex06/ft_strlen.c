@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmusayev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/13 18:50:40 by mmusayev          #+#    #+#             */
+/*   Updated: 2025/06/13 18:53:24 by mmusayev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+/*
 #include <stdio.h>
 
-// Function prototype
-int ft_strlen(const char *str);
+int ft_strlen(char *str);
 
 int main(void)
 {
-    const char *test_str = "Hello, World!";
+    char test_str[] = "This is a test message";
     int length;
 
     length = ft_strlen(test_str);
@@ -13,15 +24,16 @@ int main(void)
     printf("Length: %d\n", length);
 
     return 0;
-}
+}*/
 
-// Implement ft_strlen here
-int ft_strlen(const char *str)
+int	ft_strlen(char *str)
 {
-    int length = 0;
-    while (str[length])
-    {
-        length++;
-    }
-    return length;
+	int	length;
+
+	length = 0;
+	while (str[length])
+	{
+		length++;
+	}
+	return (length);
 }

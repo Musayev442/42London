@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmusayev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/13 18:54:25 by mmusayev          #+#    #+#             */
+/*   Updated: 2025/06/13 18:56:51 by mmusayev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+/*
 #include <stdio.h>
 
 void ft_rev_int_tab(int *tab, int size);
@@ -13,22 +25,22 @@ int main(void)
     {
         printf("%d ", tab[i]);
     }
-    printf("\n");
 
     return 0;
-}
+}*/
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-    int i = 0;
-    size -= 1;
-    int temp;
+	int	i;
+	int	temp;
 
-    while (i < size)
-    {
-        temp = tab[i];
-        tab[i] = tab[size - i];
-        tab[size - i] = temp;
-        i++;
-    }
+	i = 0;
+	size -= 1;
+	while (i < size)
+	{
+		temp = tab[i];
+		tab[i] = tab[size - i];
+		tab[size - i] = temp;
+		i++;
+	}
 }
