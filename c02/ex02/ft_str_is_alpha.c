@@ -9,23 +9,24 @@
 /*   Updated: 2025/06/16 14:55:01 by mmusayev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <stdio.h>
 int ft_str_is_alpha(char *str);
 
-int main() {
-    
-    char str[]="Thisisatext";
-    
-    int num = ft_str_is_alpha(str);
-    printf("%d", num);
-
-    return 0;
-}*/
-
-int	ft_str_is_alpha(char *str)
+int main()
 {
-	int	i;
+
+	char str[] = "Thisisatext";
+
+	int num = ft_str_is_alpha(str);
+	printf("%d", num);
+
+	return 0;
+}
+
+int ft_str_is_alpha(char *str)
+{
+	int i;
 
 	i = 0;
 	if (!str[0])
@@ -38,10 +39,10 @@ int	ft_str_is_alpha(char *str)
 		{
 			if (str[i] < 'a' || str[i] > 'z')
 			{
-				return (1);
+				return (0);
 			}
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }

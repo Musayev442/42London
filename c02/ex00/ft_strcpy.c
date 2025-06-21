@@ -10,26 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include <stdio.h>
 
 char *ft_strcpy(char *dest, char *src);
 
-int main() {
-    
-    char s[]="This is a test text";
-    char d[50];
-    
-    char *tmp = ft_strcpy(d, s);
-   
-    printf("%s", tmp);
-
-    return 0;
-}*/
-
-char	*ft_strcpy(char *dest, char *src)
+int main()
 {
-	int	i;
+
+	char s[] = "This is a test text";
+	char d[50];
+
+	char *tmp = ft_strcpy(d, s);
+
+	printf("%s", tmp);
+
+	return 0;
+}
+
+char *ft_strcpy(char *dest, char *src)
+{
+	int i;
 
 	i = 0;
 	while (src[i])
@@ -37,5 +37,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

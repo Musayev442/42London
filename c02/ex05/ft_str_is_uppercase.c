@@ -9,26 +9,26 @@
 /*   Updated: 2025/06/16 15:03:10 by mmusayev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <stdio.h>
 
 int ft_str_is_uppercase(char *str);
 
-int main() 
+int main()
 {
-    
-    char s[]="SDdfdfdf";
-    
-    int num =ft_str_is_uppercase(s);
-    
-    printf("%d", num);
 
-    return 0;
-}*/
+	char s[] = "ASDFF";
 
-int	ft_str_is_uppercase(char *str)
+	int num = ft_str_is_uppercase(s);
+
+	printf("%d", num);
+
+	return 0;
+}
+
+int ft_str_is_uppercase(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!str[0])
@@ -39,9 +39,9 @@ int	ft_str_is_uppercase(char *str)
 	{
 		if (str[i] < 'A' || str[i] > 'Z')
 		{
-			return (1);
+			return (0);
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
