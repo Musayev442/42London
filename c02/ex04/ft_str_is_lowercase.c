@@ -9,22 +9,23 @@
 /*   Updated: 2025/06/16 15:00:12 by mmusayev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-int main() 
+#include <stdio.h>
+int ft_str_is_lowercase(char *str);
+int main()
 {
-    
-    char s[]="";
-    
-    int num =ft_str_is_lowercase(s);
-    
-    printf("%d", num);
 
-    return 0;
-}*/
+	char s[] = "sdsAds";
 
-int	ft_str_is_lowercase(char *str)
+	int num = ft_str_is_lowercase(s);
+
+	printf("%d", num);
+
+	return 0;
+}
+
+int ft_str_is_lowercase(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!str[0])
@@ -35,9 +36,9 @@ int	ft_str_is_lowercase(char *str)
 	{
 		if (str[i] < 'a' || str[i] > 'z')
 		{
-			return (1);
+			return (0);
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
